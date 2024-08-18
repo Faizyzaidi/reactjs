@@ -1,18 +1,20 @@
-import { useEffect  ,useState } from 'react'
+import { useEffect,  useRef,  useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './component/Navbar'
 function App() {
   const [count, setCount] = useState(0)
-  useEffect(() => {
-    alert(You clicked ${count} times) 
-  }, [count]); // Only re-run the effect if count changes
-
+  const a = useRef(0)
+ useEffect(() =>{
+  a.current = a.current+1
+  alert("hello")
+  console.log(`${a.current}`)
+ })
   return (
     <>
       <div>
-        <Navbar title = "props"  />
+        <Navbar title = "props" />
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
