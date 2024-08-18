@@ -1,0 +1,47 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar container */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+/* Navbar list */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar list items */
+.navbar ul li {
+    margin: 0 15px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect on list items */
+.navbar ul li:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
